@@ -10,7 +10,7 @@ This is the frontend for the **Ebsar Book Management System**, developed using *
 - Axios
 - React Router
 - JWT Authentication
-- Tailwind CSS / Bootstrap (if used)
+- Bootstrap
 - Deployed on **Vercel**
 
 ---
