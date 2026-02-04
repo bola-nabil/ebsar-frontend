@@ -1,5 +1,5 @@
 import React from "react";
-import FieldError from "../errors/FieldError";
+import FieldError from "../ui/error/FieldError";
 const TextInput = ({
   className,
   label,
