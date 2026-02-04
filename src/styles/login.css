@@ -2,7 +2,7 @@
   height: 100vh;
   overflow: hidden;
   .background {
-    background-image: url("../photos/background-app.jpg");
+    background-image: url("../assets/images/background-app.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;

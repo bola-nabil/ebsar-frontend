@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import NavLinks from "./NavLinks";
+import AppLogo from "../../assets/images/app-logo.png";
 
 const NavBar = ({ menuOpen, setMenuOpen }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
@@ -24,7 +25,7 @@ const NavBar = ({ menuOpen, setMenuOpen }) => {
       <div className="logo center-row">
         <div>
           <img
-            src={require("../../photos/app_logo.png")}
+            src={AppLogo}
             alt="ebsar logo"
             className="bg-white rounded-circle"
           />

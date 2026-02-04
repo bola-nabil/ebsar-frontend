@@ -4,6 +4,7 @@ import { api } from "../../api";
 import { useNavigate } from "react-router-dom";
 import LoadingButton from "../loading/LoadingButton";
 import PageTitle from "../PageTitle";
+import AppLogo from "../../assets/images/app-logo.png";
 import "../../styles/login.css";
 
 axios.defaults.withCredentials = true;
@@ -64,7 +65,7 @@ const AdminLogin = () => {
       <div className="form-wrapper rounded-2 text-center position-absolute top-50 start-50">
         <div className="form-header">
           <img
-            src={require("../../photos/app_logo.png")}
+            src={AppLogo}
             alt="Logo"
             className="bg-white rounded-circle"
           />
