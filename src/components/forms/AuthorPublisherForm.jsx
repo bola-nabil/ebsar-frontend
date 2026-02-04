@@ -1,6 +1,6 @@
 import React from "react";
 import TextInput from "../inputs/TextInput";
-import SubmitButton from "../buttons/SubmitButton";
+import SubmitButton from "../ui/buttons/SubmitButton";
 
 const AuthorPublisherForm = ({
   handleSubmit,

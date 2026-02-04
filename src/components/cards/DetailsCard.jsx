@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { api } from "../../api";
 import { useNavigate } from "react-router-dom";
-import Carousel from "../Carousel";
+import Carousel from "../ui/carousel/Carousel";
 
 const DetailsCard = ({ active, handleActive, DetailsPath, cardId }) => {
   const [content, setContent] = useState([]);
