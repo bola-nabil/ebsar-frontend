@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import useCrudList from "../components/hooks/useCrudList";
+import useCrudList from "../hooks/useCrudList";
 import CrudListPage from "../components/pages/CrudListPage";
 
 const Books = () => {
