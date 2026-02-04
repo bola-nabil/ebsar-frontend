@@ -1,25 +1,25 @@
 import React, { useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import AdminLogin from "./components/pages/AdminLogin";
-import ChangePassword from "./components/pages/ChangePassword";
-import Dashboard from "./components/pages/Dashboard";
-import Authors from "./authors/Authors";
-import AuthorCreate from "./authors/AuthorCreate";
-import AuthorEdit from "./authors/AuthorEdit";
-import Categories from "./categories/Categories";
-import CategoryCreate from "./categories/CategoryCreate";
-import CategoryEdit from "./categories/CategoryEdit";
-import Publishers from "./publishers/Publishers";
-import PublisherCreate from "./publishers/PublisherCreate";
-import PublisherEdit from "./publishers/PublisherEdit";
-import Books from "./books/Books";
-import BookCreate from "./books/BookCreate";
-import BookEdit from "./books/BookEdit";
-import Users from "./users/Users";
+import AdminLogin from "./layouts/login/AdminLogin";
+import ChangePassword from "./pages/ChangePassword";
+import Dashboard from "./pages/dashboard/Dashboard";
+import Authors from "./features/authors/pages/Authors";
+import AuthorCreate from "./features/authors/pages/AuthorCreate";
+import AuthorEdit from "./features/authors/pages/AuthorEdit";
+import Categories from "./features/categories/pages/Categories";
+import CategoryCreate from "./features/categories/pages/CategoryCreate";
+import CategoryEdit from "./features/categories/pages/CategoryEdit";
+import Publishers from "./features/publishers/pages/Publishers";
+import PublisherCreate from "./features/publishers/pages/PublisherCreate";
+import PublisherEdit from "./features/publishers/pages/PublisherEdit";
+import Books from "./features/books/pages/Books";
+import BookCreate from "./features/books/pages/BookCreate";
+import BookEdit from "./features/books/pages/BookEdit";
+import Users from "./features/users/pages/Users";
 import NavBar from "./components/navBar/NavBar";
-import Policy from "./components/pages/Policy";
-import NotFound from "./components/pages/NotFound";
-import ServerFailed from "./components/pages/ServerFailed";
+import Policy from "./pages/Policy";
+import NotFound from "./pages/NotFound";
+import ServerFailed from "./pages/ServerFailed";
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -42,9 +42,9 @@ const App = () => {
           <Route path="/categories" element={<Categories />} />
           <Route path="/categories/create" element={<CategoryCreate />} />
           <Route path="/categories/:id/edit" element={<CategoryEdit />} />
-          <Route path="/publishers" element={<Publishers />} />
-          <Route path="/publishers/create" element={<PublisherCreate />} />
-          <Route path="/publishers/:id/edit" element={<PublisherEdit />} />
+          <Route path="/features/publishers/pages" element={<Publishers />} />
+          <Route path="/features/publishers/pages/create" element={<PublisherCreate />} />
+          <Route path="/features/publishers/pages/:id/edit" element={<PublisherEdit />} />
           <Route path="/books" element={<Books />} />
           <Route path="/books/create" element={<BookCreate />} />
           <Route path="/books/:id/edit" element={<BookEdit />} />
