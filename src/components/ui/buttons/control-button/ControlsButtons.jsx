@@ -6,7 +6,7 @@ import "./control-button.css";
 
 const ControlsButtons = ({ cardPath, card, handleDelete }) => {
   return (
-    <div className="card-controls w-100">
+    <div className="card-controls w-100 d-flex justify-content-between align-items-end">
       <div className="edit-btn btn-style center-row text-white rounded-circle">
         <Link to={`/${cardPath}/${card.id}/edit`} aria-label="Edit">
           <FontAwesomeIcon icon={faPen} className="text-white" />
