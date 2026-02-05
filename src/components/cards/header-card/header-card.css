@@ -1,0 +1,30 @@
+.header-card {
+  z-index: 1000;
+  padding-right: 300px;
+}
+
+.header-card .card-search {
+    margin-top: 10px;
+}
+
+.header-card .card-search input {
+    padding: 10px;
+    outline: none;
+    border: none;
+    border: 1px solid var(--primary);
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.header-card .card-search .search {
+    background-color: var(--primary-dark);
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 991.98px) {
+    .header-card {
+        padding-right: 20px;
+        padding-left: 40px;
+    }
+}

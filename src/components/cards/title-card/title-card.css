@@ -1,0 +1,36 @@
+.title-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-card .card-btn {
+    background-color: var(--primary);
+    padding: 15px;
+    transition: background 0.3s;
+    margin-right: 30px;
+}
+
+.title-card .card-btn a {
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.title-card .card-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+@media (max-width: 991.98px) {
+  .title-card {
+    margin-top: 0;
+    padding: 8px 0;
+  }
+
+  .title-card h2 {
+    font-size: 23px !important;
+  }
+
+  .title-card .card-btn {
+    margin-right: 0;
+  }
+}
