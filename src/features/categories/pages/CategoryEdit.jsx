@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { api } from "../../../api";
 import { useNavigate, useParams } from "react-router-dom";
-import TitleCard from "../../../components/cards/TitleCard";
+import TitleCard from "../../../components/cards/title-card/TitleCard";
 import CategoryForm from "../components/CategoryForm";
 import PageTitle from "../../../components/ui/PageTitle";
 

@@ -5,8 +5,9 @@ import { useNavigate } from "react-router-dom";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import Pagination from "../../../components/pagination/Pagination";
 import Loading from "../../../components/ui/loading/Loading";
-import ErrorMessage from "../../../components/ui/error/ErrorMessage";
+import ErrorMessage from "../../../components/ui/error/error-message/ErrorMessage";
 import PageTitle from "../../../components/ui/PageTitle";
+import "./users.css";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
