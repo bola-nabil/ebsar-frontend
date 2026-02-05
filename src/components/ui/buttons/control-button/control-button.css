@@ -1,7 +1,4 @@
 .card-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
   height: fit-content;
   margin-top: 10px;
   padding: 10px 12px;
