@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { api } from "../../../api";
 import BookForm from "../components/BookForm";
 import useBookForm from "../hooks/useBookForm";
-import TitleCard from "../../../components/cards/TitleCard";
+import TitleCard from "../../../components/cards/title-card/TitleCard";
 import PageTitle from "../../../components/ui/PageTitle";
 
 const BookEdit = () => {
