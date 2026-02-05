@@ -33,7 +33,7 @@ const NavLinks = ({ setMenuOpen }) => {
 
   return (
     <div className="header-content">
-      <div className="nav-links">
+      <div className="nav-links d-flex justify-content-center align-items-start">
         <ul className="w-100">
           {navLinks.map((link) => (
             <li key={link.id}>
@@ -43,12 +43,12 @@ const NavLinks = ({ setMenuOpen }) => {
                 className="text-decoration-none"
               >
                 <div
-                  className={`link rounded-2 ${
+                  className={`link d-flex align-items-center rounded-2 ${
                     location.pathname === link.path ? "active" : ""
                   }`}
                 >
                   <FontAwesomeIcon icon={link.icon} className="text-white" />
-                  <p>{link.title}</p>
+                  <p className="m-0">{link.title}</p>
                 </div>
               </Link>
             </li>

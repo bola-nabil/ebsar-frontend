@@ -28,7 +28,7 @@ const NavBar = ({ menuOpen, setMenuOpen }) => {
           <img
             src={AppLogo}
             alt="ebsar logo"
-            className="bg-white rounded-circle"
+            className="bg-white rounded-circle object-fit-contain"
           />
           <h2 className="fw-medium fs-5 text-white">Ebsar</h2>
         </div>
