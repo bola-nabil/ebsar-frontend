@@ -42,9 +42,9 @@ const App = () => {
           <Route path="/categories" element={<Categories />} />
           <Route path="/categories/create" element={<CategoryCreate />} />
           <Route path="/categories/:id/edit" element={<CategoryEdit />} />
-          <Route path="/features/publishers/pages" element={<Publishers />} />
-          <Route path="/features/publishers/pages/create" element={<PublisherCreate />} />
-          <Route path="/features/publishers/pages/:id/edit" element={<PublisherEdit />} />
+          <Route path="/publishers/" element={<Publishers />} />
+          <Route path="/publishers/create" element={<PublisherCreate />} />
+          <Route path="/publishers/:id/edit" element={<PublisherEdit />} />
           <Route path="/books" element={<Books />} />
           <Route path="/books/create" element={<BookCreate />} />
           <Route path="/books/:id/edit" element={<BookEdit />} />
