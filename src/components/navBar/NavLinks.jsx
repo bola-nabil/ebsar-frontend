@@ -11,6 +11,7 @@ import {
   faList,
   faFeather,
 } from "@fortawesome/free-solid-svg-icons";
+import "./nav-links.css";
 
 const NavLinks = ({ setMenuOpen }) => {
   const navLinks = [

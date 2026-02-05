@@ -1,5 +1,6 @@
 import React from "react";
 import PageTitle from "../PageTitle";
+import "./loading.css";
 
 const Loading = ({ showTitle = true }) => {
   return (

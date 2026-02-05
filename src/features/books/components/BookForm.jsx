@@ -3,7 +3,7 @@ import TextInput from "../../../components/inputs/TextInput";
 import SelectInput from "../../../components/inputs/SelectInput";
 import MultiSelectInput from "../../../components/inputs/MultiSelectInput";
 import FileInput from "../../../components/inputs/FileInput";
-import SubmitButton from "../../../components/ui/buttons/SubmitButton";
+import SubmitButton from "../../../components/ui/buttons/submit-button/SubmitButton";
 
 const BookForm = ({
   form,

@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import NavLinks from "./NavLinks";
 import AppLogo from "../../assets/images/app-logo.png";
+import "./navbar.css";
 
 const NavBar = ({ menuOpen, setMenuOpen }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 992);

@@ -18,8 +18,8 @@ import BookEdit from "./features/books/pages/BookEdit";
 import Users from "./features/users/pages/Users";
 import NavBar from "./components/navBar/NavBar";
 import Policy from "./pages/Policy";
-import NotFound from "./pages/NotFound";
-import ServerFailed from "./pages/ServerFailed";
+import NotFound from "./pages/not-found/NotFound";
+import ServerFailed from "./pages/server-failed/ServerFailed";
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
