@@ -2,8 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 20px;
-  margin-top: 200px;
-  margin-bottom: 50px;
+  margin: 200px 0 50px 0;
 }
 
 .cards .card {
@@ -11,10 +10,8 @@
 }
 
 .cards .card .card-img img {
-    width: 100%;
     height: auto;
     aspect-ratio: 6 / 8;
-    object-fit: cover;
 }
 
 .cards .card .card-name {
