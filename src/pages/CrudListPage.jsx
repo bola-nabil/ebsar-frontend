@@ -1,10 +1,10 @@
 import React from "react";
 import Loading from "../components/ui/loading/Loading";
 import Pagination from "../components/pagination/Pagination";
-import HeaderCard from "../components/cards/HeaderCard";
-import BoxCard from "../components/cards/BoxCard";
-import DetailsCard from "../components/cards/DetailsCard";
-import ErrorMessage from "../components/ui/error/ErrorMessage";
+import HeaderCard from "../components/cards/header-card/HeaderCard";
+import BoxCard from "../components/cards/box-card/BoxCard";
+import DetailsCard from "../components/cards/details-card/DetailsCard";
+import ErrorMessage from "../components/ui/error/error-message/ErrorMessage";
 import PageTitle from "../components/ui/PageTitle";
 
 const CrudListPage = ({

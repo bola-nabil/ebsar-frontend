@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { api } from "../api";
 import { useNavigate } from "react-router-dom";
-import SubmitButton from "../components/ui/buttons/SubmitButton";
+import SubmitButton from "../components/ui/buttons/submit-button/SubmitButton";
 import FieldError from "../components/ui/error/FieldError";
 import PageTitle from "../components/ui/PageTitle";
 

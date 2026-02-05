@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { api } from "../../api";
 import { useNavigate } from "react-router-dom";
-import LoadingButton from "../../components/ui/buttons/LoadingButton";
+import LoadingButton from "../../components/ui/buttons/loading-button/LoadingButton";
 import PageTitle from "../../components/ui/PageTitle";
 import AppLogo from "../../assets/images/app-logo.png";
 import "./login.css";
