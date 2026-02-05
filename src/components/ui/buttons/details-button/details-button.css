@@ -1,0 +1,12 @@
+.card-details button {
+    border: none;
+    background-color: var(--secondary);
+    padding: 12px 15px;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 991.98px) {
+  .card-details button {
+    font-size: 15px !important;
+  }
+}

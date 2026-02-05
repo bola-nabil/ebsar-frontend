@@ -1,0 +1,26 @@
+.card-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: fit-content;
+  margin-top: 10px;
+  padding: 10px 12px;
+}
+
+.card-controls .btn-style {
+    width: 40px;
+    height: 40px;
+}
+
+.card-controls .edit-btn {
+    background-color: var(--primary);
+}
+
+.card-controls .del-btn {
+    cursor: pointer;
+}
+
+.card-controls .edit-btn,
+.card-controls .del-btn {
+    font-size: 12px;
+}

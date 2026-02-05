@@ -1,0 +1,12 @@
+.submit-btn button {
+    width: 180px;
+    border: none;
+    background-color: wheat;
+    padding: 15px;
+}
+
+.submit-btn button p {
+    margin-bottom: 0;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
