@@ -1,7 +1,4 @@
 .header-content .nav-links {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
     background-color: var(--sidebar-bg);
 }
 
@@ -10,17 +7,11 @@
 }
 
 .nav-links .link {
-    display: flex;
-    align-items: center;
     gap: 16px;
     font-size: 16px;
     padding: 12px 20px;
     color: #d1d5db;
     transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.nav-links .link p {
-    margin: 0;
 }
 
 .nav-links .link:hover {

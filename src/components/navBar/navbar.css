@@ -16,7 +16,6 @@ header .logo {
     height: 50px;
     padding: 5px;
     margin-bottom: 5px;
-    object-fit: contain;
 }
 
 .logo .menu-bars {
