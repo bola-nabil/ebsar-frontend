@@ -16,6 +16,7 @@ const BoxCard = ({ cards, cardPath, handleActive, handleDelete }) => {
               <img
                 src={card.image.image_path || card.image}
                 alt="card background"
+                className="object-fit-cover w-100"
               />
               <h4 className="fw-bold fs-5 mt-3 mb-3">
                 {card.title || card.name}

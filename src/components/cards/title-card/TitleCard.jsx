@@ -4,7 +4,7 @@ import "./title-card.css";
 
 const TitleCard = ({ title, pathCard, titleCard }) => {
   return (
-    <div className="title-card w-100">
+    <div className="title-card w-100 d-flex justify-content-between align-items-center">
       <h2>{title}</h2>
       <div className="card-btn rounded-3">
         <Link
