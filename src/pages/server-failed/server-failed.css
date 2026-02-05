@@ -1,0 +1,11 @@
+.server-failed {
+  height: 100vh;
+}
+
+.server-failed a {
+    text-decoration: none;
+    background-color: var(--primary);
+    font-size: 18px;
+    border-radius: 15px;
+    padding: 10px;
+}
