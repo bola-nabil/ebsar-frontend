@@ -1,6 +1,5 @@
 import React from "react";
-import DetailsButton from "../../ui/buttons/details-button/DetailsButton";
-import ControlsButtons from "../../ui/buttons/control-button/ControlsButtons";
+import {DetailsButton, ControlsButtons} from "components/ui/buttons";
 import "./box-card.css";
 
 const BoxCard = ({ cards, cardPath, handleActive, handleDelete }) => {

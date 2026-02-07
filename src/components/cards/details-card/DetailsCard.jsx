@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { api } from "../../../api";
+import { api } from "api";
 import { useNavigate } from "react-router-dom";
 import Carousel from "../../ui/carousel/Carousel";
 import "./details-card.css";
