@@ -73,24 +73,28 @@ ul li {
   margin: auto;
   padding: 2rem;
   border-radius: 12px;
-  form {
-    padding: 20px;
-    box-shadow: 5px 5px 10px #b9b5b5;
-  }
-  label {
-    font-weight: bold;
-  }
+}
+
+.form-style form {
+  padding: 20px;
+  box-shadow: 5px 5px 10px #b9b5b5;
+}
+
+.form-style label {
+  font-weight: bold;
 }
 
 .current-image {
   padding: 10px 0;
-  h3 {
-    color: #333;
-  }
-  img {
-    width: 150px;
-    height: 200px;
-  }
+}
+
+.current-image h3 {
+  color: #333;
+}
+
+.current-image img {
+  width: 150px;
+  height: 200px;
 }
 
 @media (max-width: 991.98px) {
