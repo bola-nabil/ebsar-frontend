@@ -8,9 +8,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useDashboard } from "../../hooks/useDashboard";
 import {DashboardBooks, DashboardCounts, DonutChart} from "components/dashboard";
-import Loading from "../../components/ui/loading/Loading";
-import PageTitle from "../../components/ui/PageTitle";
-import Logout from "../../components/logout/Logout";
+import Loading from "components/ui/loading/Loading";
+import PageTitle from "components/ui/PageTitle";
+import Logout from "components/logout/Logout";
 import "./dashboard.css";
 
 const Dashboard = () => {
