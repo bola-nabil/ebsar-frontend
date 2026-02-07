@@ -5,10 +5,10 @@ import "./server-failed.css";
 
 const ServerFailed = () => {
   return (
-    <div className="server-failed center-col">
+    <div className="server-failed center-col vh-100">
       <PageTitle title="Server Failed" />
       <h1>Server Failed &#9785;</h1>
-      <Link to="/" className="text-white">
+      <Link to="/" className="text-white text-decoration-none rounded-4">
         Login Page
       </Link>
     </div>
