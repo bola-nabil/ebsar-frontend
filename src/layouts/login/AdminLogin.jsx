@@ -57,12 +57,12 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="login position-relative w-100">
+    <div className="login position-relative w-100 vh-100 overflow-hidden">
       <PageTitle title="Login | Ebsar" />
 
-      <div className="background"></div>
+      <div className="background w-100 h-100"></div>
       <div className="overlay position-absolute top-0 start-0 w-100 h-100"></div>
-      <div className="form-wrapper rounded-2 text-center position-absolute top-50 start-50">
+      <div className="form-wrapper rounded-2 text-center position-absolute top-50 start-50 w-100">
         <div className="form-header">
           <img
             src={AppLogo}
@@ -70,7 +70,7 @@ const AdminLogin = () => {
             className="bg-white rounded-circle"
           />
         </div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="d-flex flex-column">
           <label htmlFor="username" className="text-start">
             Username
           </label>
