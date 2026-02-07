@@ -1,0 +1,14 @@
+.logout-msg {
+  background-color: var(--sidebar-bg);
+  top: 60px;
+  right: 10px;
+  width: 150px;
+  height: 100px;
+  z-index: 10000;
+  padding: 10px;
+}
+
+.logout-msg .msg p {
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
