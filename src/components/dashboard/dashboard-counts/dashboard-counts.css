@@ -1,0 +1,32 @@
+.dashboard-counts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.dashboard-counts .dash-card {
+  gap: 20px;
+  box-shadow: 5px 5px 10px #b9b5b5;
+  padding: 15px 0;
+}
+
+.dashboard-counts .dash-card .card-icon {
+  background-color: var(--primary);
+  padding: 15px 25px;
+  font-size: 25px;
+}
+
+.dashboard-counts .dash-card .card-info h3 {
+  font-size: 35px;
+}
+
+.dashboard-counts .dash-card .card-info p {
+  font-size: 22px;
+}
+
+@media (max-width: 991.98px) {
+    .dashboard-counts {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      margin: 40px 20px;
+    }
+}
