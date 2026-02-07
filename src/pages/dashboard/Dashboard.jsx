@@ -92,7 +92,7 @@ const Dashboard = () => {
     <div className="dashboard edit-page mobile-container position-relative">
       <PageTitle title="Dashboard" />
 
-      <div className="dashboard-header">
+      <div className="dashboard-header d-flex justify-content-between align-items-center w-100">
         <h2>Dashboard</h2>
         <div
           className="dashboard-logout bg-white rounded-circle center-row"
@@ -103,8 +103,8 @@ const Dashboard = () => {
       </div>
 
       {active && (
-        <div className="logout-msg rounded-2">
-          <div className="msg">
+        <div className="logout-msg rounded-2 position-absolute">
+          <div className="msg text-center">
             <p className="text-white rounded-2 fw-bold" onClick={handleLogout}>
               Logout
             </p>
@@ -122,7 +122,7 @@ const Dashboard = () => {
               <FontAwesomeIcon icon={card.icon} />
             </div>
             <div className="card-info">
-              <h3>{card.nums}</h3>
+              <h3 className="fw-bold">{card.nums}</h3>
               <p>{card.title}</p>
             </div>
           </div>
@@ -132,7 +132,7 @@ const Dashboard = () => {
       <div className="dashboard-carts">
         <div className="last-books bg-white rounded-4">
           <h3>Recent Added Books</h3>
-          <table className="bg-white rounded-2">
+          <table className="bg-white rounded-2 w-100 overflow-hidden">
             <thead className="text-white">
               <tr>
                 <th>Title</th>
