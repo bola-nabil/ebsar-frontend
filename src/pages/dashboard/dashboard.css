@@ -9,102 +9,18 @@
   cursor: pointer;
 }
 
-.dashboard .logout-msg {
-  background-color: var(--sidebar-bg);
-  top: 60px;
-  right: 10px;
-  width: 150px;
-  height: 100px;
-  z-index: 10000;
-  padding: 10px;
-}
-
-.dashboard .logout-msg .msg p {
-  border-bottom: 1px solid white;
-  cursor: pointer;
-}
-
-.dashboard .dashboard-counts {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.dashboard .dashboard-counts .dash-card {
-  gap: 20px;
-  box-shadow: 5px 5px 10px #b9b5b5;
-  padding: 15px 0;
-}
-
-.dashboard-counts .dash-card .card-icon {
-  background-color: var(--primary);
-  padding: 15px 25px;
-  font-size: 25px;
-}
-
-.dashboard-counts .dash-card .card-info h3 {
-  font-size: 35px;
-}
-
-.dashboard-counts .dash-card .card-info p {
-  font-size: 22px;
-}
-
-.dashboard .dashboard-carts {
+.dashboard .dashboard-statistics {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px;
   margin: 60px 0;
 }
 
-.dashboard .dashboard-carts .last-books {
-  box-shadow: 5px 5px 10px #b9b5b5;
-  padding: 20px;
-}
-
-.dashboard-carts .last-books h3 {
-  padding-bottom: 10px;
-}
-
-.dashboard-carts .last-books table {
-  border-collapse: collapse;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.dashboard-carts .last-books table thead {
-  background-color: #1f2937;
-}
-
-.dashboard-carts .last-books table th,
-.dashboard-carts .last-books table td {
-  padding: 1rem;
-  text-align: left;
-}
-
-.dashboard-carts .last-books table tbody tr {
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.dashboard-carts .last-books table tbody tr:nth-child(even) {
-  background-color: #f3f4f6;
-}
-
-.dashboard-carts .last-books table tbody tr:hover {
-  background-color: #e0f2fe;
-}
-
-.dashboard-carts .last-books table th {
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-}
-
-.dashboard-carts .books-category {
+.dashboard-statistics .books-category {
   box-shadow: 5px 5px 10px #b9b5b5;
 }
 
-.dash-card,
-.table tr:hover {
+.dash-card {
   transform: translateY(-2px);
   transition: 0.3s ease;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
@@ -115,11 +31,7 @@
     .dashboard-header {
       padding: 0 20px;
     }
-    .dashboard-counts {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      margin: 40px 20px;
-    }
-    .dashboard-carts {
+    .dashboard-statistics {
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       margin: 0 20px;
     }
