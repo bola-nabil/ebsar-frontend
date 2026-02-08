@@ -1,0 +1,16 @@
+.card-search {
+    margin-top: 10px;
+}
+
+.card-search input {
+    padding: 10px;
+    border: 1px solid var(--primary);
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.card-search .search {
+    background-color: var(--primary-dark);
+    padding: 10px 30px;
+    cursor: pointer;
+}
