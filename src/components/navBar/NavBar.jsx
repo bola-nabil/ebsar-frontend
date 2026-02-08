@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import NavLinks from "./NavLinks";
-import AppLogo from "../../assets/images/app-logo.png";
+import AppLogo from "assets/images/app-logo.png";
 import "./navbar.css";
 
 const NavBar = ({ menuOpen, setMenuOpen }) => {
