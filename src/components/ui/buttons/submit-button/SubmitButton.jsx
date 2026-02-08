@@ -1,15 +1,19 @@
-import React from "react";
-import LoadingButton from "../loading-button/LoadingButton";
+import {memo} from "react";
+import { LoadingButton } from "..";
 import "./submit-button.css";
 
 const SubmitButton = ({ loading, content }) => {
   return (
     <div className="submit-btn center-row text-center">
-      <button type="submit" className="rounded-3 border-0">
-        {loading ? <LoadingButton /> : <p className="fw-bold">{content}</p>}
+      <button
+        type="submit" 
+        className="rounded-3 border-0"
+        disabled={loading}
+       >
+        {loading ? <LoadingButton /> : content}
       </button>
     </div>
   );
 };
 
-export default SubmitButton;
+export default memo(SubmitButton);
