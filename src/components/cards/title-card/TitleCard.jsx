@@ -1,21 +1,22 @@
-import React from "react";
+import {memo} from "react";
 import { Link } from "react-router-dom";
 import "./title-card.css";
 
 const TitleCard = ({ title, pathCard, titleCard }) => {
-  return (
-    <div className="title-card w-100 d-flex justify-content-between align-items-center">
+  return(
+    <div className="title-card d-flex align-items-center justify-content-between">
       <h2>{title}</h2>
-      <div className="card-btn rounded-3">
+      <div className="card-btn">
         <Link
           to={pathCard}
-          className="fw-medium text-white text-decoration-none"
+          aria-label={titleCard}
+          className="fw-medium text-decoration-none p-3 text-white rounded-3"
         >
           {titleCard}
         </Link>
       </div>
     </div>
-  );
+  )
 };
 
-export default TitleCard;
+export default memo(TitleCard);
