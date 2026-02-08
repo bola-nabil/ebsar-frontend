@@ -1,7 +1,7 @@
 import React from "react";
 import FieldError from "../ui/error/FieldError";
 
-const FileInput = ({ label, name, onChange, error, className }) => {
+const FileInput = ({ label, name, onChange, error, className = "", ...props }) => {
   return (
     <div className={className}>
       <label htmlFor={name} className="form-label">
@@ -13,6 +13,7 @@ const FileInput = ({ label, name, onChange, error, className }) => {
         id={name}
         name={name}
         onChange={onChange}
+        {...props}
       />
       {error && <FieldError error={error} />}
     </div>

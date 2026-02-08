@@ -5,9 +5,9 @@ const Logout = ({onLogout}) => {
   return (
     <div className="logout-msg rounded-2 position-absolute">
     <div className="msg text-center">
-        <p className="text-white rounded-2 fw-bold" onClick={onLogout }>
+        <button className="text-white rounded-2 fw-bold bg-primary p-2 rounded-2 border-0" onClick={onLogout }>
             Logout
-        </p>
+        </button>
     </div>
     </div>
   )

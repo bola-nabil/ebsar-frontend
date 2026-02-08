@@ -2,13 +2,14 @@ import React from "react";
 import FieldError from "../ui/error/FieldError";
 
 const MultiSelectInput = ({
-  className,
+  className = "",
   label,
   name,
   value,
   onChange,
   options,
   error,
+  ...props
 }) => {
   return (
     <div className={className}>
@@ -21,6 +22,7 @@ const MultiSelectInput = ({
         className="form-select"
         value={value}
         onChange={onChange}
+        {...props}
       >
         <option disabled>Select {label}</option>
         {options.length === 0 ? (

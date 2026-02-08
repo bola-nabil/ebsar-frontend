@@ -2,13 +2,14 @@ import React from "react";
 import FieldError from "../ui/error/FieldError";
 
 const SelectInput = ({
-  className,
+  className = "",
   label,
   name,
   options,
   value,
   onChange,
   error,
+  ...props
 }) => {
   return (
     <div className={className}>
@@ -21,6 +22,7 @@ const SelectInput = ({
         className="form-select"
         value={value}
         onChange={onChange}
+        {...props}
       >
         <option value="">Select publisher</option>
         {options.length === 0 ? (

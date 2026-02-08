@@ -1,13 +1,14 @@
 import React from "react";
 import FieldError from "../ui/error/FieldError";
 const TextInput = ({
-  className,
+  className = "",
   label,
   name,
   value,
   onChange,
   error,
-  errorStatus = true,
+  showError = true,
+  ...props
 }) => {
   return (
     <div className={className}>
@@ -21,8 +22,9 @@ const TextInput = ({
         name={name}
         value={value}
         onChange={onChange}
+        {...props}
       />
-      {errorStatus ? (
+      {showError ? (
         error && <FieldError error={error} />
       ) : (
         <div className="error-message mt-2">
