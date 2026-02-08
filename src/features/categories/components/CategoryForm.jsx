@@ -1,7 +1,6 @@
 import React from "react";
-import TextInput from "../../../components/inputs/TextInput";
-import FileInput from "../../../components/inputs/FileInput";
-import SubmitButton from "../../../components/ui/buttons/submit-button/SubmitButton";
+import {TextInput, FileInput} from "components/inputs";
+import {SubmitButton} from "components/ui/buttons";
 
 const CategoryForm = ({
   name,
