@@ -1,24 +1,30 @@
-import React, { useState } from "react";
-import { api } from "../api";
+import React, { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import SubmitButton from "../components/ui/buttons/submit-button/SubmitButton";
-import FieldError from "../components/ui/error/FieldError";
-import PageTitle from "../components/ui/PageTitle";
+import { api } from "../api";
+import PageTitle from "components/ui/PageTitle";
+import { SubmitButton } from "components/ui/buttons";
+import { PasswordInput } from "components/inputs";
 
 
 const ChangePassword = () => {
+  const navigate = useNavigate();
+
   const [form, setForm] = useState({
     current_password: "",
     new_password: "",
     new_password_confirmation: "",
   });
-  const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
-  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+  const handleChange = useCallback(
+    (e) => {
+      const { name, value } = e.target;
+      setForm((prev) => ({ ...prev, [name]: value }));
+      setErrors((prev) => ({ ...prev, [name]: null }));
+    },
+    []
+  );
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -44,66 +50,45 @@ const ChangePassword = () => {
   };
 
   const isMismatch =
-    form.new_password && form.new_password !== form.new_password_confirmation;
+    form.new_password &&
+    form.new_password_confirmation &&
+    form.new_password !== form.new_password_confirmation;
 
   return (
     <div className="mobile-container edit-page">
       <PageTitle title="Change Password" />
-
-      <h2>Change Password</h2>
+      <h2 className="mb-4">Change Password</h2>
 
       <div className="form-style center-form center-row">
         <form onSubmit={handleSubmit} className="form-control">
-          <div className="mb-4">
-            <label htmlFor="current-password" className="form-label">
-              Current Password
-            </label>
-            <input
-              className="form-control"
-              type="password"
-              name="current_password"
-              id="current-password"
-              placeholder="Current Password"
-              value={form.current_password}
-              onChange={handleChange}
-            />
-            <FieldError error={errors.current_password} />
-          </div>
+          <PasswordInput
+            label="Current Password"
+            name="current_password"
+            value={form.current_password}
+            onChange={handleChange}
+            error={errors.current_password}
+          />
 
-          <div className="mb-4">
-            <label htmlFor="new-password" className="form-label">
-              New Password
-            </label>
-            <input
-              className="form-control"
-              type="password"
-              name="new_password"
-              id="new-password"
-              placeholder="New Password"
-              value={form.new_password}
-              onChange={handleChange}
-            />
-            <FieldError error={errors.new_password} />
-          </div>
+          <PasswordInput
+            label="New Password"
+            name="new_password"
+            value={form.new_password}
+            onChange={handleChange}
+            error={errors.new_password}
+          />
 
-          <div className="mb-3">
-            <label htmlFor="confirm-password" className="form-label">
-              Confirm New Password
-            </label>
-            <input
-              className="form-control"
-              type="password"
-              name="new_password_confirmation"
-              id="confirm-password"
-              placeholder="Confirm New Password"
-              value={form.new_password_confirmation}
-              onChange={handleChange}
-            />
-            <FieldError error={errors.new_password_confirmation} />
-          </div>
+          <PasswordInput
+            label="Confirm New Password"
+            name="new_password_confirmation"
+            value={form.new_password_confirmation}
+            onChange={handleChange}
+            error={errors.new_password_confirmation}
+          />
 
           {isMismatch && (
-            <p className="text-danger small mb-3"> * Passwords do not match</p>
+            <p className="text-danger small mb-3">
+              * Passwords do not match
+            </p>
           )}
 
           <SubmitButton

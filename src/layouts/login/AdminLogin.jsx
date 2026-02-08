@@ -1,32 +1,31 @@
 import React, { useState } from "react";
-import axios from "axios";
-import { api } from "../../api";
 import { useNavigate } from "react-router-dom";
-import LoadingButton from "../../components/ui/buttons/loading-button/LoadingButton";
-import PageTitle from "../../components/ui/PageTitle";
-import AppLogo from "../../assets/images/app-logo.png";
+import { api } from "api";
+import PageTitle from "components/ui/PageTitle";
+import { LoadingButton } from "components/ui/buttons";
+import AppLogo from "assets/images/app-logo.png";
 import "./login.css";
 
-axios.defaults.withCredentials = true;
-
 const AdminLogin = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({ name: "", password: "" });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
 
+  // Handle input changes
   const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value.trimStart(),
-    }));
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value.trimStart() }));
   };
 
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
 
-    if (!formData.name || !formData.password) {
+    const { name, password } = formData;
+    if (!name || !password) {
       setError("Username and password are required");
       return;
     }
@@ -34,23 +33,18 @@ const AdminLogin = () => {
     setLoading(true);
 
     try {
-      const response = await api.post("/admin/login", formData);
-      localStorage.setItem("admin_token", response.data.token);
-
-      if (response.data.status === "success") {
+      const { data } = await api.post("/admin/login", formData);
+      if (data.status === "success") {
+        localStorage.setItem("admin_token", data.token);
         setTimeout(() => navigate("/dashboard"), 500);
       } else {
-        setError(response.data.message);
+        setError(data.message || "Login failed");
       }
     } catch (err) {
-      console.error("Error during admin login => ", err);
-      if (err.response) {
-        setError(err.response.data.message || "Login failed");
-      } else if (err.request) {
-        navigate("/server-failed");
-      } else {
-        setError("Error: " + err.message);
-      }
+      console.error("Login error =>", err);
+      if (err.response) setError(err.response.data.message || "Login failed");
+      else if (err.request) navigate("/server-failed");
+      else setError(err.message);
     } finally {
       setLoading(false);
     }
@@ -62,44 +56,44 @@ const AdminLogin = () => {
 
       <div className="background w-100 h-100"></div>
       <div className="overlay position-absolute top-0 start-0 w-100 h-100"></div>
-      <div className="form-wrapper rounded-2 text-center position-absolute top-50 start-50 w-100">
-        <div className="form-header">
-          <img
-            src={AppLogo}
-            alt="Logo"
-            className="bg-white rounded-circle"
-          />
-        </div>
-        <form onSubmit={handleSubmit} className="d-flex flex-column">
-          <label htmlFor="username" className="text-start">
-            Username
-          </label>
-          <input
-            type="text"
-            id="username"
-            name="name"
-            className="rounded-2"
-            onChange={handleChange}
-            autoComplete="username"
-            aria-label="Username"
-          />
 
-          <label htmlFor="password" className="text-start">
-            Password
-          </label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            className="rounded-2"
-            onChange={handleChange}
-            autoComplete="current-password"
-            aria-label="Password"
-          />
+      <div className="form-wrapper rounded-2 text-center position-absolute top-50 start-50 w-100">
+        <div className="form-header mb-4">
+          <img src={AppLogo} alt="Logo" className="bg-white rounded-circle" />
+        </div>
+
+        <form onSubmit={handleSubmit} className="d-flex flex-column gap-3">
+          <div className="form-group">
+            <label htmlFor="username" className="text-start">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="name"
+              className="rounded-2 form-control"
+              value={formData.name}
+              onChange={handleChange}
+              autoComplete="username"
+              aria-label="Username"
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="password" className="text-start">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              className="rounded-2 form-control"
+              value={formData.password}
+              onChange={handleChange}
+              autoComplete="current-password"
+              aria-label="Password"
+            />
+          </div>
 
           <button
             type="submit"
-            className="bg-white rounded-2"
+            className="bg-white rounded-2 btn-submit"
             disabled={loading}
           >
             {loading ? <LoadingButton /> : "Login"}
