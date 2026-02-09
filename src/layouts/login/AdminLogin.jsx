@@ -4,6 +4,7 @@ import { api } from "api";
 import PageTitle from "components/ui/PageTitle";
 import { LoadingButton } from "components/ui/buttons";
 import AppLogo from "assets/images/app-logo.png";
+import BackgroundImage from "assets/images/background-app.webp";
 import "./login.css";
 
 const AdminLogin = () => {
@@ -13,13 +14,11 @@ const AdminLogin = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value.trimStart() }));
   };
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
@@ -54,17 +53,26 @@ const AdminLogin = () => {
     <div className="login position-relative w-100 vh-100 overflow-hidden">
       <PageTitle title="Login | Ebsar" />
 
-      <div className="background w-100 h-100"></div>
-      <div className="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+      <div className="bg-wrapper">
+        <img
+          src={BackgroundImage}
+          alt=""
+          className="bg-image w-100 h-100 object-fit-cover"
+          loading="eager"
+          sizes="100vw"
+          fetchpriority="high"
+        />
+        <div className="overlay"></div>
+    </div>
 
       <div className="form-wrapper rounded-2 text-center position-absolute top-50 start-50 w-100">
         <div className="form-header mb-4">
-          <img src={AppLogo} alt="Logo" className="bg-white rounded-circle" />
+          <img src={AppLogo} alt="Logo" className="bg-white rounded-circle object-fit-cover" />
         </div>
 
         <form onSubmit={handleSubmit} className="d-flex flex-column gap-3">
           <div className="form-group">
-            <label htmlFor="username" className="text-start">Username</label>
+            <label htmlFor="username" className="pb-2">Username</label>
             <input
               type="text"
               id="username"
@@ -78,7 +86,7 @@ const AdminLogin = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="password" className="text-start">Password</label>
+            <label htmlFor="password" className="pb-2">Password</label>
             <input
               type="password"
               id="password"
