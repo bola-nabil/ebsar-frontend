@@ -7,16 +7,15 @@ import {
   faList,
 } from "@fortawesome/free-solid-svg-icons";
 import { useDashboard } from "../../hooks/useDashboard";
-import {DashboardBooks, DashboardCounts, DonutChart} from "components/dashboard";
+import {DashboardBooks, DashboardCounts, DonutChart, DashboardNav} from "components/dashboard";
 import Loading from "components/ui/loading/Loading";
 import PageTitle from "components/ui/PageTitle";
-import Logout from "components/logout/Logout";
 import "./dashboard.css";
 
 const Dashboard = () => {
 
   const {books, counts, loading, logout} = useDashboard();
-  const [showLogout, setShowLogout] = useState(false);
+  const [showNav, setShowNav] = useState(false);
 
   const dashboardCounts = useMemo(
     () => [
@@ -33,20 +32,20 @@ const Dashboard = () => {
   if (loading) return <Loading />;
 
   return (
-    <main className="dashboard edit-page mobile-container position-relative">
+    <div className="dashboard position-relative">
       <PageTitle title="Dashboard" />
 
       <div className="dashboard-header d-flex justify-content-between align-items-center w-100">
         <h2>Dashboard</h2>
         <div
-          className="dashboard-logout bg-white rounded-circle center-row"
-          onClick={() => setShowLogout((prev) => !prev)}
+          className="dashboard-user bg-white rounded-circle center-row"
+          onClick={() => setShowNav((prev) => !prev)}
         >
           <FontAwesomeIcon icon={faUser} />
         </div>
       </div>
 
-      {showLogout && <Logout onLogout={logout} />}
+      { showNav && <DashboardNav onLogout={logout}/>}
 
       <DashboardCounts dashboardCounts={dashboardCounts}/>
 
@@ -59,7 +58,7 @@ const Dashboard = () => {
           <DonutChart />
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 
