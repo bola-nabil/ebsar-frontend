@@ -1,0 +1,13 @@
+.dashboard-nav {
+  background-color: var(--sidebar-bg);
+  top: -80px;
+  right: 5px;
+  z-index: 10000;
+  padding: 10px;
+}
+
+@media (max-width: 991.98px) {
+  .dashboard-nav {
+    top: -50px;
+  }
+}
