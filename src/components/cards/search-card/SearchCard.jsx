@@ -6,7 +6,7 @@ import "./search-card.css";
 const SearchCard = ({searchTerm, setSearchTerm, handleSearch}) => {
     const handleChange = (e) => setSearchTerm(e.target.value);
   return (
-    <div className="card-search center-row text-white">
+    <div className="search-card center-row text-white">
         <input
           type="text"
           className="fw-bold rounded-4 w-75"
