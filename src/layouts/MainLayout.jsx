@@ -4,7 +4,7 @@ import "./layout.css"
 
 const MainLayout = ({children, menuOpen, setMenuOpen}) => {
   return (
-    <div className='dashboard-layout'>
+    <div className='layout'>
         <NavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <main className='content'>
             {children}
