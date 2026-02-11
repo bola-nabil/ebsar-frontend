@@ -25,7 +25,7 @@ const CrudListPage = ({
   if (loading) return <Loading />;
 
   return (
-    <div className="mobile-container edit-page">
+    <div>
       <PageTitle title={title} />
 
       <DetailsCard
