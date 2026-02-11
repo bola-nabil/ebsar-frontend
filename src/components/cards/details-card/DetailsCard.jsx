@@ -2,14 +2,8 @@ import React, { useState, useEffect, useMemo } from "react";
 import { api } from "api";
 import { useNavigate } from "react-router-dom";
 import Carousel from "../../ui/carousel/Carousel";
+import { LoadingCard } from "..";
 import "./details-card.css";
-
-const LoadingCard = () => (
-  <div className="loading-card center-col text-white rounded-3 position-absolute top-50 start-50">
-    <div className="loading-style rounded-circle"></div>
-    <h4>Loading...</h4>
-  </div>
-);
 
 const AuthorsBox = ({ authors }) => (
   <div className="box rounded-3">
@@ -71,8 +65,8 @@ const DetailsCard = ({ active, handleActive, DetailsPath, cardId }) => {
   const hasAuthors = authors.length > 0;
 
   return (
-    <div className="details-card position-relative" onClick={handleActive}>
-      <div className="card bg-white rounded-3 position-absolute top-50 start-50">
+    <div className="details-card center-row vh-100" onClick={handleActive}>
+      <div className="card bg-white rounded-3">
         {data.image ? (
           <div className="card-img">
             <img
