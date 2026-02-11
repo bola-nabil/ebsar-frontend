@@ -5,12 +5,18 @@
 
 .dashboard-layout .content {
   flex: 1;
-  padding: 20px;
+  padding:  0 20px;
 }
 
+@media (max-width: 991.98px) {
+  .dashboard-layout .content {
+    padding: 0 10px;
+  }
+}
 
 @media(min-width: 992px) {
   .dashboard-layout .content {
     margin-left: 250px;
   }
 }
+
