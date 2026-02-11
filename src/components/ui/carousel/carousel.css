@@ -6,6 +6,10 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.carousel-container .carousel-item  {
+    margin-right: 50px;
+}
+
 .carousel-container .carousel-item img {
     max-height: 200px;
 }
