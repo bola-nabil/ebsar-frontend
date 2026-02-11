@@ -4,7 +4,7 @@ import "./not-found.css";
 
 const NotFound = () => {
   return (
-    <div className="mobile-container edit-page not-found-page">
+    <main className="not-found-page d-flex justify-content-center align-items-center text-center w-100 vh-100">
       <PageTitle title="404 - Page Not Found" />
 
       <div className="not-found center-col text-center">
@@ -13,7 +13,7 @@ const NotFound = () => {
           Oops! Page Not Found
         </p>
       </div>
-    </div>
+    </main>
   );
 };
 
