@@ -64,18 +64,16 @@ const Users = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   if (loading) return <Loading />;
+  if(currentUsers.length === 0) return <ErrorMessage message="No users found"/>
 
   return (
-    <div className="users edit-page mobile-container">
+    <div className="users">
       <PageTitle title="Users" />
 
       <div className="users-header">
         <h2>Users</h2>
       </div>
 
-      {currentUsers.length === 0 ? (
-        <ErrorMessage message="No users found" />
-      ) : (
         <div className="users-card">
           {currentUsers.map((user) => (
             <div
@@ -100,7 +98,6 @@ const Users = () => {
             </div>
           ))}
         </div>
-      )}
 
       <Pagination
         currentPage={currentPage}
