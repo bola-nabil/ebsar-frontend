@@ -7,7 +7,7 @@
   position: fixed;
   top: 10px;
   left: 0;
-  z-index: 1000;
+  z-index: 50;
 }
 
 .dashboard-header .dashboard-user {
