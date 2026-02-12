@@ -54,7 +54,7 @@ const Dashboard = () => {
         <DashboardBooks lastBooks={lastBooks} />
 
         <div className="books-category bg-white rounded-4 center-col">
-          <h3>Books Per Category</h3>
+          <h3 className="pt-3">Books Per Category</h3>
           <DonutChart />
         </div>
       </div>
