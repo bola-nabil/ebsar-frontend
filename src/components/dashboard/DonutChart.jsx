@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { PieChart, Pie, Cell, Legend, ResponsiveContainer } from "recharts";
-import { api } from "../../api";
+import { api } from "api";
 
 const COLORS = ["#6366f1", "#8b5cf6", "#facc15", "#f87171"];
 
