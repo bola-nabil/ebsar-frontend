@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { api } from "../../../api";
+import { api } from "api";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import Pagination from "../../../components/pagination/Pagination";
-import Loading from "../../../components/ui/loading/Loading";
-import ErrorMessage from "../../../components/ui/error/error-message/ErrorMessage";
-import PageTitle from "../../../components/ui/PageTitle";
+import Pagination from "components/pagination/Pagination";
+import Loading from "components/ui/loading/Loading";
+import ErrorMessage from "components/ui/error/error-message/ErrorMessage";
+import PageTitle from "components/ui/PageTitle";
 import "./users.css";
 
 const Users = () => {
