@@ -1,5 +1,15 @@
+.server-failed {
+    height: 100vh;
+}
+
 .server-failed a {
     background-color: var(--primary);
     font-size: 18px;
     padding: 10px;
+}
+
+@media (max-width: 991.98px) {
+    .server-failed {
+        height: calc(100vh - 90px);
+    }
 }
