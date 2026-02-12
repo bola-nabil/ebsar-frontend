@@ -1,17 +1,17 @@
-.danger-msg {
-  height: calc(100vh - 30px);
+.error-message {
+  height: 100vh;
 }
 
-.danger-msg .msg p {
+.error-message p {
   letter-spacing: 2px;
 }
 
 @media (max-width: 991.98px) {
-  .danger-msg {
-    height: calc(100vh - 170px);
+  .error-message {
+    height: calc(100vh - 90px);
   }
 
-  .danger-msg .msg p {
+  .error-message p {
     font-size: 18px !important;
   }
 }
