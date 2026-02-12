@@ -8,7 +8,7 @@ const AuthorCreate = () => {
     useFormResource({ resource: "authors" });
 
   return (
-    <main className="mobile-container edit-page">
+    <section>
       <PageTitle title="Create Author" />
       <TitleCard title="Create Author" pathCard="/authors" titleCard="Authors" />
       <AuthorPublisherForm
@@ -20,7 +20,7 @@ const AuthorCreate = () => {
         loading={loading}
         submitText="Create Author"
       />
-    </main>
+    </section>
   );
 };
 
