@@ -55,48 +55,50 @@ const ChangePassword = () => {
     form.new_password !== form.new_password_confirmation;
 
   return (
-    <div className="mobile-container edit-page">
+    <div>
       <PageTitle title="Change Password" />
-      <h2 className="mb-4">Change Password</h2>
+      <h2 className="mt-4 ps-2">Change Password</h2>
 
-      <div className="form-style center-form center-row">
-        <form onSubmit={handleSubmit} className="form-control">
-          <PasswordInput
-            label="Current Password"
-            name="current_password"
-            value={form.current_password}
-            onChange={handleChange}
-            error={errors.current_password}
-          />
+      <div className="center-row form-center">
+        <div className="form-style">
+          <form onSubmit={handleSubmit}>
+            <PasswordInput
+              label="Current Password"
+              name="current_password"
+              value={form.current_password}
+              onChange={handleChange}
+              error={errors.current_password}
+            />
 
-          <PasswordInput
-            label="New Password"
-            name="new_password"
-            value={form.new_password}
-            onChange={handleChange}
-            error={errors.new_password}
-          />
+            <PasswordInput
+              label="New Password"
+              name="new_password"
+              value={form.new_password}
+              onChange={handleChange}
+              error={errors.new_password}
+            />
 
-          <PasswordInput
-            label="Confirm New Password"
-            name="new_password_confirmation"
-            value={form.new_password_confirmation}
-            onChange={handleChange}
-            error={errors.new_password_confirmation}
-          />
+            <PasswordInput
+              label="Confirm New Password"
+              name="new_password_confirmation"
+              value={form.new_password_confirmation}
+              onChange={handleChange}
+              error={errors.new_password_confirmation}
+            />
 
-          {isMismatch && (
-            <p className="text-danger small mb-3">
-              * Passwords do not match
-            </p>
-          )}
+            {isMismatch && (
+              <p className="text-danger small mb-3">
+                * Passwords do not match
+              </p>
+            )}
 
-          <SubmitButton
-            loading={loading}
-            content="Change Password"
-            disabled={isMismatch}
-          />
-        </form>
+            <SubmitButton
+              loading={loading}
+              content="Change Password"
+              disabled={isMismatch}
+            />
+          </form>
+        </div>
       </div>
     </div>
   );
