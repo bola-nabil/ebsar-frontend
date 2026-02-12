@@ -1,5 +1,6 @@
 .loading {
   background-color: var(--primary);
+  height: 100vh;
 }
 
 .loading h4 {
@@ -18,6 +19,7 @@
 @media (max-width: 991.98px) {
   .loading {
     margin-left: 0;
+    height: calc(100vh - 90px);
   }
 
   .loading h4 {
