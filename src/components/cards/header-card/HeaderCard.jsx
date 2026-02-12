@@ -12,7 +12,7 @@ const HeaderCard = ({
   handleSearch,
 }) => {
   return (
-    <div className="header-card w-100 position-fixed top-0 start-0">
+    <div className="header-card w-100">
       <TitleCard title={title} pathCard={pathCard} titleCard={titleCard} />
       <SearchCard 
         searchTerm={searchTerm} 
