@@ -24,7 +24,7 @@ const CategoryEdit = () => {
 
 
   return (
-    <div className="mobile-container edit-page">
+    <section>
       <PageTitle title="Edit Category" />
 
       <TitleCard
@@ -41,7 +41,7 @@ const CategoryEdit = () => {
         }}
         submitText="Update Category"
       />
-    </div>
+    </section>
   );
 };
 

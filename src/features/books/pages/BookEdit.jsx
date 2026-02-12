@@ -38,7 +38,7 @@ const BookEdit = () => {
   };
 
   return (
-    <div className="mobile-container edit-page">
+    <section>
       <PageTitle title="Edit Book" />
       <TitleCard title="Edit Book" pathCard="/books" titleCard="Books" />
 
@@ -48,7 +48,7 @@ const BookEdit = () => {
         handleSubmit={handleSubmit}
         submitLabel="Update Book"
       />
-    </div>
+    </section>
   );
 };
 

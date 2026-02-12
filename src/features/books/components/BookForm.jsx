@@ -30,8 +30,8 @@ const BookForm = ({
   );
 
   return (
-    <div className="form-style">
-      <form onSubmit={handleSubmit} className="form-control">
+    <div className="form-style mt-5">
+      <form onSubmit={handleSubmit}>
         <TextInput
           className="mb-3"
           label="Title"
