@@ -5,7 +5,7 @@ import "./server-failed.css";
 
 const ServerFailed = () => {
   return (
-    <main className="server-failed center-col vh-100">
+    <main className="server-failed center-col">
       <PageTitle title="Server Failed Page" />
 
       <h1 className="fw-bold text-danger mb-3">Server Error &#9785;</h1>
