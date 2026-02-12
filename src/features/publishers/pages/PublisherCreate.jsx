@@ -8,7 +8,7 @@ const PublisherCreate = () => {
     useFormResource({ resource: "publishers" });
 
     return (
-      <main className="mobile-container edit-page">
+      <section>
         <PageTitle title="Create Publisher" />
         <TitleCard
           title="Create Publisher"
@@ -24,7 +24,7 @@ const PublisherCreate = () => {
           loading={loading}
           submitText="Create Publisher"
         />
-      </main>
+      </section>
   );
 };
 

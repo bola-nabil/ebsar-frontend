@@ -8,7 +8,7 @@ const CategoryCreate = () => {
   const category = useCategoryForm({ mode: "create" });
 
   return (
-    <div className="mobile-container edit-page">
+    <section>
       <PageTitle title="Create Category" />
 
       <TitleCard
@@ -25,7 +25,7 @@ const CategoryCreate = () => {
         }}
         submitText="Create Category"
       />
-    </div>
+    </section>
   );
 };
 
