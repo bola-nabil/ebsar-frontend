@@ -18,6 +18,7 @@ const MultiSelectInput = ({
       </label>
       <select
         multiple
+        name={name}
         id={name}
         className="form-select"
         value={value}
