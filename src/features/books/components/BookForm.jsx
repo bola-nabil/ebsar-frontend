@@ -54,6 +54,7 @@ const BookForm = ({
         <MultiSelectInput
           className="mb-3"
           label="Authors"
+          name="Authors"
           value={form.author_ids}
           options={authors}
           onChange={onAuthorsChange}
@@ -63,6 +64,7 @@ const BookForm = ({
         <MultiSelectInput
           className="mb-3"
           label="Categories"
+          name="Categories"
           value={form.category_ids}
           options={categories}
           onChange={onCategoriesChange}
