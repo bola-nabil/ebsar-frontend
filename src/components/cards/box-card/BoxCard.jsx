@@ -16,7 +16,7 @@ const CardImage = ({ image, title }) => (
       alt={title}
       className="object-fit-cover w-100"
     />
-    <h4 className="fw-bold fs-5 mt-3 mb-3">{title}</h4>
+    <h1 className="fw-bold fs-5 mt-3 mb-3">{title}</h1>
   </div>
 );
 
