@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { api } from "api";
+import { motion, AnimatePresence  } from "framer-motion";
+import {containerUsersVariants, usersCardVariants} from "utilts/animations";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
@@ -74,11 +76,23 @@ const Users = () => {
         <h2>Users</h2>
       </div>
 
-        <div className="users-card">
+        <motion.div 
+            className="users-card"
+            variants={containerUsersVariants}
+            initial='hidden'
+            animate='show'
+        >
+          <AnimatePresence>
           {currentUsers.map((user) => (
-            <div
+            <motion.div
               className="box center-col bg-white rounded-3 text-center"
               key={user.id}
+              variants={usersCardVariants}
+              initial="hidden"
+              animate="show"
+              exit="exit"
+              layout
+              whileHover={{ y: -3, boxShadow: "0 8px 20px rgba(0,0,0,0.08)" }}
             >
               <div className="box-details">
                 <h3>{user.name}</h3>
@@ -95,9 +109,11 @@ const Users = () => {
                   <FontAwesomeIcon icon={faTrash} />
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+
+          </AnimatePresence>
+        </motion.div>
 
       <Pagination
         currentPage={currentPage}
