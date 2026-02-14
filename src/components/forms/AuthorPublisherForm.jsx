@@ -21,7 +21,7 @@ const AuthorPublisherForm = ({
             value={name}
             onChange={(e) => setName(e.target.value)}
             error={error}
-            errorStatus={false}
+            showError={false}
           />
           <SubmitButton loading={loading} content={submitText} />
         </form>
