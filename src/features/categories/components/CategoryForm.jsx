@@ -5,7 +5,6 @@ import {SubmitButton} from "components/ui/buttons";
 const CategoryForm = ({
   name,
   setName,
-  image,
   setImage,
   currentImage,
   errors,
@@ -14,7 +13,7 @@ const CategoryForm = ({
   submitText = "Submit",
 }) => {
   return (
-    <div className="center-row form-center mt-10">
+    <div className="center-row form-center mt-lg-5">
       <div className="form-style">
           <form onSubmit={handleSubmit}>
             <TextInput
@@ -32,7 +31,7 @@ const CategoryForm = ({
                 <img
                   src={currentImage}
                   alt="Current Category"
-                  className="rounded-4"
+                  className="rounded-4 object-fit-cover"
                 />
               </div>
             )}
