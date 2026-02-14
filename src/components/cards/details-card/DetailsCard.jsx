@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {backdropVariants, detailsVariants} from "utilts/animations";
 import { api } from "api";
 import { useNavigate } from "react-router-dom";
 import Carousel from "../../ui/carousel/Carousel";
@@ -54,7 +56,37 @@ const DetailsCard = ({ active, handleActive, DetailsPath, cardId }) => {
   }, [cardId, DetailsPath, navigate]);
 
   const data = useMemo(() => content?.book || content?.category || content?.author || content?.publisher, [content]);
-  if (!active) return null;
+  if (!active)
+    return (
+    <AnimatePresence>
+      {active && (
+        <motion.div
+          className="details-card center-row vh-100"
+          onClick={handleActive}
+          variants={backdropVariants}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          transition={{ duration: 0.25 }}
+        >
+          {loading || !data ? (
+            <LoadingCard />
+          ) : (
+            <motion.div
+              className="card bg-white rounded-3"
+              variants={detailsVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              onClick={(e) => e.stopPropagation()}
+            >
+    </motion.div>
+          )}
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+  
   if (loading || !data) return <LoadingCard />;
 
   const books = data.books || [];

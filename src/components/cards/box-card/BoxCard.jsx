@@ -1,5 +1,7 @@
 import {memo} from "react";
+import { motion } from "framer-motion";
 import {DetailsButton, ControlsButtons} from "components/ui/buttons";
+import {containerVariants, cardVariants} from "utilts/animations";
 import "./box-card.css";
 
 const getCardTitle = (card) => card.title || card.name;
@@ -33,13 +35,22 @@ const PopularBooks = ({ books = [] }) => (
 
 const BoxCard = ({ cards = [], cardPath, handleActive, handleDelete }) => {
   return (
-    <div className="cards">
+    <motion.div 
+      className="cards"
+      variants={containerVariants}
+      initial="hidden"
+      animate="show"
+    >
       {cards.map((card) => {
         const title = getCardTitle(card);
 
         return (
-          <div
+          <motion.div
             key={card.id}
+            variants={cardVariants}
+            whileHover={{ y: -6 }}
+            whileTap={{ scale: 0.98 }}
+            layout
             className="card center-col bg-white rounded-3 text-center"
           >
             {card.image ? (
@@ -60,10 +71,10 @@ const BoxCard = ({ cards = [], cardPath, handleActive, handleDelete }) => {
               card={card}
               handleDelete={handleDelete}
             />
-          </div>
+          </motion.div>
         );
       })}
-    </div>
+    </motion.div>
   );
 };
 
