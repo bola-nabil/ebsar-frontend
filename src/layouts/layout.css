@@ -1,22 +1,17 @@
-.dashboard-layout {
+.layout {
   display: flex;
   height: 100vh;
 }
 
-.dashboard-layout .content {
+.layout .content {
   flex: 1;
   padding:  0 20px;
+  margin-left: 260px;
 }
 
 @media (max-width: 991.98px) {
-  .dashboard-layout .content {
-    padding: 0 10px;
+  .layout .content {
+    padding: 0;
+    margin: 90px 0 0 0;
   }
 }
-
-@media(min-width: 992px) {
-  .dashboard-layout .content {
-    margin-left: 250px;
-  }
-}
-

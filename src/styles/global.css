@@ -37,20 +37,6 @@ ul li {
   list-style: none;
 }
 
-.edit-page {
-  margin-left: 270px;
-  margin-top: 20px;
-  padding: 0 20px;
-}
-
-.users .danger-msg {
-  height: calc(100vh - 200px) !important;
-}
-
-.center-form {
-  height: calc(100vh - 300px);
-}
-
 .active-foucs {
   display: none;
 }
@@ -68,8 +54,12 @@ ul li {
   align-items: center;
 }
 
+.form-center {
+  height: 100vh;
+}
+
 .form-style {
-  max-width: 600px;
+  width: 600px;
   margin: auto;
   padding: 2rem;
   border-radius: 12px;
@@ -98,26 +88,10 @@ ul li {
 }
 
 @media (max-width: 991.98px) {
-  .edit-page {
-    margin-left: 0;
-    padding: 0;
-    margin-top: 120px;
+  .form-center {
+    height: calc(100vh  - 90px);
   }
-  .mobile-container {
-    padding: 1px 20px 0 20px;
-    margin-bottom: 40px;
-  }
-  .users .danger-msg {
-    height: calc(100vh - 250px) !important;
-  }
-  .mobile-edit {
-    padding-top: 1px;
-    margin-bottom: 60px;
-  }
-}
-
-@media (min-width: 992px) {
-  .center-form {
-    height: calc(100vh - 100px);
+  .form-style {
+    width: fit-content;
   }
 }
