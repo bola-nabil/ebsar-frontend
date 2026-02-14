@@ -14,6 +14,8 @@ const SearchCard = ({searchTerm, setSearchTerm, handleSearch}) => {
         className="search-card center-row text-white"
     >
         <motion.input
+          id='search'
+          name='search'
           type="text"
           className="fw-bold rounded-4 w-75"
           value={searchTerm}

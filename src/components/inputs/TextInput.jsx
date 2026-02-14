@@ -22,6 +22,7 @@ const TextInput = ({
         name={name}
         value={value}
         onChange={onChange}
+        autoComplete="off"
         {...props}
       />
       {error && (
