@@ -24,12 +24,14 @@ const TextInput = ({
         onChange={onChange}
         {...props}
       />
-      {showError ? (
-        error && <FieldError error={error} />
-      ) : (
-        <div className="error-message mt-2">
-          <p className="text-danger">{error}</p>
-        </div>
+      {error && (
+        showError ? (
+          <FieldError error={error} />
+        ) : (
+          <div className="error-message mt-2">
+            <p className="text-danger">{error}</p>
+          </div>
+        )
       )}
     </div>
   );
