@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import NavLinks from "./NavLinks";
-import AppLogo from "assets/images/app-logo.png";
+import AppLogo from "assets/images/app-logo.avif";
 import "./navbar.css";
 
 const NavBar = ({ menuOpen, setMenuOpen }) => {
@@ -28,7 +28,11 @@ const NavBar = ({ menuOpen, setMenuOpen }) => {
           <img
             src={AppLogo}
             alt="ebsar logo"
-            className="bg-white rounded-circle object-fit-contain"
+            width="60"
+            height="60"
+            className="bg-white rounded-circle object-fit-cover"
+            decoding="async"
+            fetchpriority="high"
           />
           <h2 className="fw-medium fs-5 text-white">Ebsar</h2>
         </div>
