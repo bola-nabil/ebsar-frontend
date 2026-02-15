@@ -1,7 +1,11 @@
-import {memo} from "react";
+import { memo } from "react";
 import "./details-button.css";
 
-const DetailsButton = ({ onClick, label = "See More"}, className = "", ...props) => {
+const DetailsButton = (
+  { onClick, label = "See More" },
+  className = "",
+  ...props
+) => {
   return (
     <div className="details-btn">
       <button

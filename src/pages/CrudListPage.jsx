@@ -1,7 +1,7 @@
 import React from "react";
 import Loading from "components/ui/loading/Loading";
 import Pagination from "components/pagination/Pagination";
-import {HeaderCard, BoxCard, DetailsCard} from "components/cards";
+import { HeaderCard, BoxCard, DetailsCard } from "components/cards";
 import ErrorMessage from "components/ui/error/error-message/ErrorMessage";
 import PageTitle from "components/ui/PageTitle";
 

@@ -10,37 +10,37 @@
 }
 
 .cards .card .card-img img {
-    height: auto;
-    aspect-ratio: 6 / 8;
+  height: auto;
+  aspect-ratio: 6 / 8;
 }
 
 .cards .card .card-name {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 .cards .card .popular-books p {
-    letter-spacing: 2px;
-    font-size: 18px;
-    margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .cards .card .popular-books .popular {
-    margin-bottom: 25px;
-    background-color: var(--primary);
-    padding: 8px 0;
+  margin-bottom: 25px;
+  background-color: var(--primary);
+  padding: 8px 0;
 }
 
 .cards .card .popular-books .popular:hover {
-    background-color: var(--primary-dark);
-    transition: 0.3s;
+  background-color: var(--primary-dark);
+  transition: 0.3s;
 }
 
 @media (max-width: 767.98px) {
-    .cards {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        justify-content: center;
-        padding: 10px 40px 40px 40px;
-    }
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-content: center;
+    padding: 10px 40px 40px 40px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -52,9 +52,9 @@
 
 @media (max-width: 991.98px) {
   .cards .card .card-name {
-        font-size: 18px;
+    font-size: 18px;
   }
-  
+
   .cards .card .popular-books p {
     font-size: 16px;
   }

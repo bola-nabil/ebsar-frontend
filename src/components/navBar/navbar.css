@@ -7,19 +7,19 @@ header {
 }
 
 header .logo {
-    gap: 10px;
-    margin: 30px 0;
+  gap: 10px;
+  margin: 30px 0;
 }
 
 .logo img {
-    width: 60px;
-    height: 60px;
-    padding: 5px;
-    margin-bottom: 5px;
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+  margin-bottom: 5px;
 }
 
 .logo .menu-bars {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 @media (max-width: 991.98px) {

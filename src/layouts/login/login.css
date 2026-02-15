@@ -20,9 +20,9 @@
 }
 
 .form-wrapper .form-header img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 20px;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
 }
 
 .form-wrapper form {
@@ -85,6 +85,6 @@
 
   .form-wrapper input,
   .form-wrapper button {
-        font-size: 1rem;
+    font-size: 1rem;
   }
 }

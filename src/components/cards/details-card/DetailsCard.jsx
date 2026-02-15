@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {backdropVariants, detailsVariants} from "utilts/animations";
+import { backdropVariants, detailsVariants } from "utilts/animations";
 import { api } from "api";
 import { useNavigate } from "react-router-dom";
 import Carousel from "../../ui/carousel/Carousel";
@@ -55,38 +55,44 @@ const DetailsCard = ({ active, handleActive, DetailsPath, cardId }) => {
       .finally(() => setLoading(false));
   }, [cardId, DetailsPath, navigate]);
 
-  const data = useMemo(() => content?.book || content?.category || content?.author || content?.publisher, [content]);
+  const data = useMemo(
+    () =>
+      content?.book ||
+      content?.category ||
+      content?.author ||
+      content?.publisher,
+    [content],
+  );
   if (!active)
     return (
-    <AnimatePresence>
-      {active && (
-        <motion.div
-          className="details-card center-row vh-100"
-          onClick={handleActive}
-          variants={backdropVariants}
-          initial="hidden"
-          animate="visible"
-          exit="hidden"
-          transition={{ duration: 0.25 }}
-        >
-          {loading || !data ? (
-            <LoadingCard />
-          ) : (
-            <motion.div
-              className="card bg-white rounded-3"
-              variants={detailsVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              onClick={(e) => e.stopPropagation()}
-            >
-    </motion.div>
-          )}
-        </motion.div>
-      )}
-    </AnimatePresence>
-  );
-  
+      <AnimatePresence>
+        {active && (
+          <motion.div
+            className="details-card center-row vh-100"
+            onClick={handleActive}
+            variants={backdropVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            transition={{ duration: 0.25 }}
+          >
+            {loading || !data ? (
+              <LoadingCard />
+            ) : (
+              <motion.div
+                className="card bg-white rounded-3"
+                variants={detailsVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                onClick={(e) => e.stopPropagation()}
+              ></motion.div>
+            )}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    );
+
   if (loading || !data) return <LoadingCard />;
 
   const books = data.books || [];
@@ -102,7 +108,11 @@ const DetailsCard = ({ active, handleActive, DetailsPath, cardId }) => {
         {data.image ? (
           <div className="card-img">
             <img
-              src={typeof data.image === "string" ? data.image : data.image.image_path}
+              src={
+                typeof data.image === "string"
+                  ? data.image
+                  : data.image.image_path
+              }
               alt={data.title || data.name || "Image"}
             />
           </div>
@@ -137,7 +147,9 @@ const DetailsCard = ({ active, handleActive, DetailsPath, cardId }) => {
             </div>
           )}
 
-          {!hasAuthors && hasBooks && <Carousel books={books} interval={3000} />}
+          {!hasAuthors && hasBooks && (
+            <Carousel books={books} interval={3000} />
+          )}
           {!hasAuthors && !hasBooks && (
             <div className="center-row">
               <p className="text-danger fw-bold fs-3">No Books Found</p>

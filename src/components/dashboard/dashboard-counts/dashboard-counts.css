@@ -26,8 +26,8 @@
 }
 
 @media (max-width: 991.98px) {
-    .dashboard-counts {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      margin-top: 150px;
-    }
+  .dashboard-counts {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin-top: 150px;
+  }
 }

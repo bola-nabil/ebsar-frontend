@@ -11,7 +11,7 @@ const useCrudList = ({ endpoint, searchPath, perPage = 8 }) => {
 
   const totalPages = useMemo(
     () => Math.ceil(items.length / perPage),
-    [items, perPage]
+    [items, perPage],
   );
 
   const fetchAll = useCallback(async () => {
@@ -71,7 +71,7 @@ const useCrudList = ({ endpoint, searchPath, perPage = 8 }) => {
     async (id) => {
       if (
         !window.confirm(
-          `Are you sure you want to delete this ${endpoint.slice(0, -1)}?`
+          `Are you sure you want to delete this ${endpoint.slice(0, -1)}?`,
         )
       )
         return;
@@ -91,7 +91,7 @@ const useCrudList = ({ endpoint, searchPath, perPage = 8 }) => {
         setLoading(false);
       }
     },
-    [endpoint, navigate]
+    [endpoint, navigate],
   );
 
   const currentItems = useMemo(() => {

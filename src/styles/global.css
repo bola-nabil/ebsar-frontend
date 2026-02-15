@@ -89,7 +89,7 @@ ul li {
 
 @media (max-width: 991.98px) {
   .form-center {
-    height: calc(100vh  - 90px);
+    height: calc(100vh - 90px);
   }
   .form-style {
     width: fit-content;

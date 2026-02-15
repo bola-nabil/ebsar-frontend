@@ -1,27 +1,27 @@
 .details-card .card {
-    box-shadow: 5px 5px 10px #b9b5b5;
-    color: var(--text);
-    height: 400px;
-    width: 900px;
-    display: grid;
-    grid-template-columns: 250px calc(900px - 250px);
-    cursor: pointer;
+  box-shadow: 5px 5px 10px #b9b5b5;
+  color: var(--text);
+  height: 400px;
+  width: 900px;
+  display: grid;
+  grid-template-columns: 250px calc(900px - 250px);
+  cursor: pointer;
 }
 
 .card .card-img img {
-    height: 400px;
-    width: 250px;
+  height: 400px;
+  width: 250px;
 }
 
 .card .card-welcome .welcome-style {
-    width: 120px;
-    height: 120px;
-    background-color: var(--secondary);
+  width: 120px;
+  height: 120px;
+  background-color: var(--secondary);
 }
 
 .card .card-welcome .welcome-style p {
-    height: inherit;
-    font-size: 20px;
+  height: inherit;
+  font-size: 20px;
 }
 
 .card .card-info {
@@ -80,15 +80,15 @@
 }
 
 .card .card-info .audio {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 @media (max-width: 991.98px) {
   .details-card .card {
-      width: 380px;
-      height: fit-content;
-      display: block;
-      padding: 10px;
+    width: 380px;
+    height: fit-content;
+    display: block;
+    padding: 10px;
   }
 
   .details-card .card .card-img {
@@ -102,10 +102,10 @@
   .details-card .card .card-info {
     padding: 0;
   }
-  
+
   .details-card .card .card-info .info-boxs {
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
 
   .details-card .card .card-info .info-boxs .box {

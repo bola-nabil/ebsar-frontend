@@ -16,9 +16,9 @@
 }
 
 .title-card-content .btn a {
-    font-size: 15px;
-    letter-spacing: 2px;
-    background-color: var(--primary);
+  font-size: 15px;
+  letter-spacing: 2px;
+  background-color: var(--primary);
 }
 
 .title-card-content .btn a:hover {

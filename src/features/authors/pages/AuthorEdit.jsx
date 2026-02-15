@@ -2,17 +2,21 @@ import { useParams } from "react-router-dom";
 import TitleCard from "components/cards/title-card/TitleCard";
 import PageTitle from "components/ui/PageTitle";
 import AuthorPublisherForm from "components/forms/AuthorPublisherForm";
-import {useFormResource} from "hooks/useFormResource";
+import { useFormResource } from "hooks/useFormResource";
 
 const AuthorEdit = () => {
- const { id } = useParams();
+  const { id } = useParams();
   const { name, setName, loading, error, handleSubmit, handleChange } =
     useFormResource({ resource: "authors", id });
 
- return (
+  return (
     <section>
       <PageTitle title="Edit Author" />
-      <TitleCard title="Update Author" pathCard="/authors" titleCard="Authors" />
+      <TitleCard
+        title="Update Author"
+        pathCard="/authors"
+        titleCard="Authors"
+      />
       <AuthorPublisherForm
         handleSubmit={handleSubmit}
         name={name}

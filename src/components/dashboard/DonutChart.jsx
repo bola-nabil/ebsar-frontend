@@ -25,7 +25,7 @@ const DonutChart = () => {
       RomanticCount = 0;
 
     const categoriesNames = books.flatMap((book) =>
-      book.categories.map((c) => c.name)
+      book.categories.map((c) => c.name),
     );
 
     for (let i = 0; i < categoriesNames.length; i++) {

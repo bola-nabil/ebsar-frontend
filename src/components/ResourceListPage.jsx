@@ -26,24 +26,24 @@ const ResourceListPage = ({ resource, title }) => {
 
   return (
     <main>
-        <CrudListPage
-            title={title}
-            path={resource}
-            detailsPath={resource}
-            items={items}
-            searchTerm={searchTerm}
-            setSearchTerm={setSearchTerm}
-            handleSearch={handleSearch}
-            handleDelete={handleDelete}
-            active={active}
-            toggleDetails={toggleDetails}
-            selectedId={selectedId}
-            currentPage={currentPage}
-            totalPages={totalPages}
-            paginate={setCurrentPage}
-            message={message}
-            loading={loading}
-        />
+      <CrudListPage
+        title={title}
+        path={resource}
+        detailsPath={resource}
+        items={items}
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+        handleSearch={handleSearch}
+        handleDelete={handleDelete}
+        active={active}
+        toggleDetails={toggleDetails}
+        selectedId={selectedId}
+        currentPage={currentPage}
+        totalPages={totalPages}
+        paginate={setCurrentPage}
+        message={message}
+        loading={loading}
+      />
     </main>
   );
 };

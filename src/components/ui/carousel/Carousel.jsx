@@ -27,7 +27,7 @@ const Carousel = ({ books, interval = 3000 }) => {
           <img
             src={books[index]?.image?.image_path}
             alt={books[index]?.title}
-            className="rounded-2 object-fit-cover w-full"
+            className="rounded-2 object-fit-cover w-100"
           />
           <h3 className="text-white">{books[index]?.title}</h3>
         </motion.div>

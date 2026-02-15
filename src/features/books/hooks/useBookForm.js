@@ -25,17 +25,15 @@ export default function useBookForm(initialState = initialFormState) {
       const { name, value, files, type } = e.target;
       updateForm(name, type === "file" ? files?.[0] || null : value);
     },
-    [updateForm]
+    [updateForm],
   );
 
   const handleMultiSelect = useCallback(
     (name, e) => {
-      const values = Array.from(e.target.selectedOptions).map(
-        (o) => o.value
-      );
+      const values = Array.from(e.target.selectedOptions).map((o) => o.value);
       updateForm(name, values);
     },
-    [updateForm]
+    [updateForm],
   );
 
   const submit = useCallback(
@@ -70,7 +68,7 @@ export default function useBookForm(initialState = initialFormState) {
         setLoading(false);
       }
     },
-    [form]
+    [form],
   );
 
   const resetForm = useCallback(() => {

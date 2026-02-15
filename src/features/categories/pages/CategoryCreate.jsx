@@ -1,10 +1,9 @@
-import {TitleCard} from "components/cards";
+import { TitleCard } from "components/cards";
 import CategoryForm from "../components/CategoryForm";
 import PageTitle from "components/ui/PageTitle";
 import useCategoryForm from "../hooks/useCategoryForm";
 
 const CategoryCreate = () => {
-
   const category = useCategoryForm({ mode: "create" });
 
   return (
@@ -16,7 +15,7 @@ const CategoryCreate = () => {
         pathCard="/categories"
         titleCard="Categories"
       />
-      
+
       <CategoryForm
         {...category}
         handleSubmit={(e) => {

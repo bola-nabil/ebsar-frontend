@@ -35,18 +35,18 @@
 }
 
 @media (max-width: 991.98px) {
-    .dashboard {
-      padding-bottom: 5px;
-    }
+  .dashboard {
+    padding-bottom: 5px;
+  }
 
-    .dashboard .dashboard-header {
-      padding-left: 10px;
-      padding-right: 10px;
-      top: 100px;
-    }
+  .dashboard .dashboard-header {
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 100px;
+  }
 
-    .dashboard-statistics {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      margin: 0 20px;
-    }
+  .dashboard-statistics {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin: 0 20px;
+  }
 }

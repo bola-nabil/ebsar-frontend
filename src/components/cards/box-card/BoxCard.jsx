@@ -1,13 +1,12 @@
-import {memo} from "react";
+import { memo } from "react";
 import { motion } from "framer-motion";
-import {DetailsButton, ControlsButtons} from "components/ui/buttons";
-import {containerVariants, cardVariants} from "utilts/animations";
+import { DetailsButton, ControlsButtons } from "components/ui/buttons";
+import { containerVariants, cardVariants } from "utilts/animations";
 import "./box-card.css";
 
 const getCardTitle = (card) => card.title || card.name;
 
-const getShortName = (name = "") =>
-  name.split(" ").slice(0, 2).join(" ");
+const getShortName = (name = "") => name.split(" ").slice(0, 2).join(" ");
 
 const CardImage = ({ image, title }) => (
   <div className="card-img">
@@ -35,7 +34,7 @@ const PopularBooks = ({ books = [] }) => (
 
 const BoxCard = ({ cards = [], cardPath, handleActive, handleDelete }) => {
   return (
-    <motion.div 
+    <motion.div
       className="cards"
       variants={containerVariants}
       initial="hidden"
@@ -77,6 +76,5 @@ const BoxCard = ({ cards = [], cardPath, handleActive, handleDelete }) => {
     </motion.div>
   );
 };
-
 
 export default memo(BoxCard);

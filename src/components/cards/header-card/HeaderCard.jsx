@@ -14,9 +14,9 @@ const HeaderCard = ({
   return (
     <div className="header-card w-100">
       <TitleCard title={title} pathCard={pathCard} titleCard={titleCard} />
-      <SearchCard 
-        searchTerm={searchTerm} 
-        setSearchTerm={setSearchTerm} 
+      <SearchCard
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
         handleSearch={handleSearch}
       />
     </div>

@@ -21,12 +21,12 @@ const BookForm = ({
 }) => {
   const onAuthorsChange = useCallback(
     (e) => handleMultiSelect("author_ids", e),
-    [handleMultiSelect]
+    [handleMultiSelect],
   );
 
   const onCategoriesChange = useCallback(
     (e) => handleMultiSelect("category_ids", e),
-    [handleMultiSelect]
+    [handleMultiSelect],
   );
 
   return (

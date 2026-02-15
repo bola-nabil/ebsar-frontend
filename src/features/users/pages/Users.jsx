@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { api } from "api";
-import { motion, AnimatePresence  } from "framer-motion";
-import {containerUsersVariants, usersCardVariants} from "utilts/animations";
+import { motion, AnimatePresence } from "framer-motion";
+import { containerUsersVariants, usersCardVariants } from "utilts/animations";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
@@ -36,7 +36,7 @@ const Users = () => {
 
   const handleDelete = async (id) => {
     const confirmDelete = window.confirm(
-      "Are you sure you want to delete this user?"
+      "Are you sure you want to delete this user?",
     );
     if (!confirmDelete) return;
     setLoading(true);
@@ -66,7 +66,8 @@ const Users = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   if (loading) return <Loading />;
-  if(currentUsers.length === 0) return <ErrorMessage message="No users found"/>
+  if (currentUsers.length === 0)
+    return <ErrorMessage message="No users found" />;
 
   return (
     <div className="users">
@@ -76,13 +77,13 @@ const Users = () => {
         <h2>Users</h2>
       </div>
 
-        <motion.div 
-            className="users-card"
-            variants={containerUsersVariants}
-            initial='hidden'
-            animate='show'
-        >
-          <AnimatePresence>
+      <motion.div
+        className="users-card"
+        variants={containerUsersVariants}
+        initial="hidden"
+        animate="show"
+      >
+        <AnimatePresence>
           {currentUsers.map((user) => (
             <motion.div
               className="box center-col bg-white rounded-3 text-center"
@@ -111,9 +112,8 @@ const Users = () => {
               </div>
             </motion.div>
           ))}
-
-          </AnimatePresence>
-        </motion.div>
+        </AnimatePresence>
+      </motion.div>
 
       <Pagination
         currentPage={currentPage}

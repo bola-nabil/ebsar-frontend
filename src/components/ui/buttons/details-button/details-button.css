@@ -1,7 +1,7 @@
 .details-btn button {
-    background-color: var(--secondary);
-    padding: 12px 15px;
-    letter-spacing: 2px;
+  background-color: var(--secondary);
+  padding: 12px 15px;
+  letter-spacing: 2px;
 }
 
 @media (max-width: 991.98px) {

@@ -1,14 +1,14 @@
-import {useEffect} from "react";
+import { useEffect } from "react";
 import { api } from "api";
 import { useParams } from "react-router-dom";
-import {TitleCard} from "components/cards";
+import { TitleCard } from "components/cards";
 import PageTitle from "components/ui/PageTitle";
 import CategoryForm from "../components/CategoryForm";
 import useCategoryForm from "../hooks/useCategoryForm";
 
 const CategoryEdit = () => {
   const { id } = useParams();
-  const category = useCategoryForm({id, mode: "edit"});
+  const category = useCategoryForm({ id, mode: "edit" });
 
   useEffect(() => {
     api
@@ -22,7 +22,6 @@ const CategoryEdit = () => {
       });
   }, [id]);
 
-
   return (
     <section>
       <PageTitle title="Edit Category" />
@@ -33,7 +32,7 @@ const CategoryEdit = () => {
         titleCard="Categories"
       />
 
-    <CategoryForm
+      <CategoryForm
         {...category}
         handleSubmit={(e) => {
           e.preventDefault();

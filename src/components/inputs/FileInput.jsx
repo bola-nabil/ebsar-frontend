@@ -1,7 +1,14 @@
 import React from "react";
 import FieldError from "../ui/error/FieldError";
 
-const FileInput = ({ label, name, onChange, error, className = "", ...props }) => {
+const FileInput = ({
+  label,
+  name,
+  onChange,
+  error,
+  className = "",
+  ...props
+}) => {
   return (
     <div className={className}>
       <label htmlFor={name} className="form-label">

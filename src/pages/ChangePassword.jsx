@@ -5,7 +5,6 @@ import PageTitle from "components/ui/PageTitle";
 import { SubmitButton } from "components/ui/buttons";
 import { PasswordInput } from "components/inputs";
 
-
 const ChangePassword = () => {
   const navigate = useNavigate();
 
@@ -17,14 +16,11 @@ const ChangePassword = () => {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
 
-  const handleChange = useCallback(
-    (e) => {
-      const { name, value } = e.target;
-      setForm((prev) => ({ ...prev, [name]: value }));
-      setErrors((prev) => ({ ...prev, [name]: null }));
-    },
-    []
-  );
+  const handleChange = useCallback((e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: null }));
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -87,9 +83,7 @@ const ChangePassword = () => {
             />
 
             {isMismatch && (
-              <p className="text-danger small mb-3">
-                * Passwords do not match
-              </p>
+              <p className="text-danger small mb-3">* Passwords do not match</p>
             )}
 
             <SubmitButton

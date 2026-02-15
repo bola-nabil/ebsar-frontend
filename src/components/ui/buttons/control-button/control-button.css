@@ -5,19 +5,19 @@
 }
 
 .card-controls .btn-style {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .card-controls .edit-btn {
-    background-color: var(--primary);
+  background-color: var(--primary);
 }
 
 .card-controls .del-btn {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .card-controls .edit-btn,
 .card-controls .del-btn {
-    font-size: 12px;
+  font-size: 12px;
 }

@@ -41,10 +41,11 @@ export const useFormResource = ({ resource, id }) => {
         navigate("/server-failed");
       }
     } catch (err) {
-      console.error(`Failed to ${id ? "update" : "create"} ${resource} => `, err);
-      setError(
-        `* ${err?.response?.data?.message || "Something went wrong."}`
+      console.error(
+        `Failed to ${id ? "update" : "create"} ${resource} => `,
+        err,
       );
+      setError(`* ${err?.response?.data?.message || "Something went wrong."}`);
     } finally {
       setLoading(false);
     }

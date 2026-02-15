@@ -1,7 +1,7 @@
 import TitleCard from "components/cards/title-card/TitleCard";
 import PageTitle from "components/ui/PageTitle";
 import AuthorPublisherForm from "components/forms/AuthorPublisherForm";
-import {useFormResource} from "hooks/useFormResource";
+import { useFormResource } from "hooks/useFormResource";
 
 const AuthorCreate = () => {
   const { name, setName, loading, error, handleSubmit, handleChange } =
@@ -10,7 +10,11 @@ const AuthorCreate = () => {
   return (
     <section>
       <PageTitle title="Create Author" />
-      <TitleCard title="Create Author" pathCard="/authors" titleCard="Authors" />
+      <TitleCard
+        title="Create Author"
+        pathCard="/authors"
+        titleCard="Authors"
+      />
       <AuthorPublisherForm
         handleSubmit={handleSubmit}
         name={name}

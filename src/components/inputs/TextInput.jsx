@@ -25,15 +25,14 @@ const TextInput = ({
         autoComplete="off"
         {...props}
       />
-      {error && (
-        showError ? (
+      {error &&
+        (showError ? (
           <FieldError error={error} />
         ) : (
           <div className="error-message mt-2">
             <p className="text-danger">{error}</p>
           </div>
-        )
-      )}
+        ))}
     </div>
   );
 };

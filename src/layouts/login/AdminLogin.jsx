@@ -57,29 +57,33 @@ const AdminLogin = () => {
         <img
           src={BackgroundImage}
           alt="ebsar"
-          className="bg-image w-100 h-100 object-fit-cover"
+          className="w-100 h-100 object-fit-cover"
           loading="eager"
-          sizes="100vw"
+          width={1520}
+          height={900}
           fetchpriority="high"
         />
         <div className="overlay"></div>
-    </div>
+      </div>
 
       <div className="form-wrapper rounded-2 text-center position-absolute top-50 start-50 w-100">
         <div className="form-header mb-4">
-          <img src={AppLogo} 
-            alt="Logo" 
-            className="bg-white rounded-circle object-fit-cover" 
+          <img
+            src={AppLogo}
+            alt="Logo"
+            className="bg-white rounded-circle object-fit-cover"
             width="80"
             height="80"
             decoding="async"
             fetchpriority="high"
-            />
+          />
         </div>
 
         <form onSubmit={handleSubmit} className="d-flex flex-column gap-3">
           <div className="form-group">
-            <label htmlFor="username" className="pb-2">Username</label>
+            <label htmlFor="username" className="pb-2">
+              Username
+            </label>
             <input
               type="text"
               id="username"
@@ -93,7 +97,9 @@ const AdminLogin = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="password" className="pb-2">Password</label>
+            <label htmlFor="password" className="pb-2">
+              Password
+            </label>
             <input
               type="password"
               id="password"

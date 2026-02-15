@@ -4,10 +4,18 @@ import { faTrash, faPen } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import "./control-button.css";
 
-const ControlsButtons = ({ cardPath, card, handleDelete, className = "", ...props }) => {
+const ControlsButtons = ({
+  cardPath,
+  card,
+  handleDelete,
+  className = "",
+  ...props
+}) => {
   return (
-    <div className={`card-controls w-100 d-flex justify-content-between align-items-end ${className}`} {...props}>
-      
+    <div
+      className={`card-controls w-100 d-flex justify-content-between align-items-end ${className}`}
+      {...props}
+    >
       <Link
         to={`/${cardPath}/${card.id}/edit`}
         aria-label={`Edit ${card.name || card.title}`}
@@ -24,7 +32,6 @@ const ControlsButtons = ({ cardPath, card, handleDelete, className = "", ...prop
       >
         <FontAwesomeIcon icon={faTrash} />
       </button>
-
     </div>
   );
 };

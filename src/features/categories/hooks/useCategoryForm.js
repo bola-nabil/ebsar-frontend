@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { api } from "api";
 
@@ -35,8 +35,7 @@ const useCategoryForm = ({ id = null, mode = "create" }) => {
     if (mode === "edit") formData.append("_method", "PUT");
 
     try {
-      const url =
-        mode === "create" ? "/categories" : `/categories/${id}`;
+      const url = mode === "create" ? "/categories" : `/categories/${id}`;
 
       const response = await api.post(url, formData, {
         headers: { "Content-Type": "multipart/form-data" },

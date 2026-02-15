@@ -1,22 +1,22 @@
 .search-card {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .search-card input {
-    padding: 10px;
-    border: 1px solid var(--primary);
-    margin-right: 20px;
-    font-size: 18px;
+  padding: 10px;
+  border: 1px solid var(--primary);
+  margin-right: 20px;
+  font-size: 18px;
 }
 
 .search-card .search {
-    background-color: var(--primary-dark);
-    padding: 10px 30px;
-    cursor: pointer;
+  background-color: var(--primary-dark);
+  padding: 10px 30px;
+  cursor: pointer;
 }
 
 @media (max-width: 991.98px) {
-    .search-card {
-        margin-top: 60px;
-    }
+  .search-card {
+    margin-top: 60px;
+  }
 }

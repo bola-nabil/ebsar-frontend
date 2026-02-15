@@ -6,17 +6,17 @@
 }
 
 .users-card .box {
-    box-shadow: 5px 5px 10px #b9b5b5;
-    padding: 15px 0;
+  box-shadow: 5px 5px 10px #b9b5b5;
+  padding: 15px 0;
 }
 
 .users-card .box .box-details h3 {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 .users-card .box .box-details .del-user {
-    width: 45px;
-    height: 45px;
-    font-size: 14px;
-    cursor: pointer;
+  width: 45px;
+  height: 45px;
+  font-size: 14px;
+  cursor: pointer;
 }
