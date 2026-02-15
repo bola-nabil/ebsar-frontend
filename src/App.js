@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import AdminLogin from "./layouts/login/AdminLogin";
 import ChangePassword from "./pages/ChangePassword";
-import Dashboard from "pages/Dashboard";
+import Dashboard from "pages/Dashboard/Dashboard";
 import { AuthorCreate, AuthorEdit, Authors } from "features/authors";
 import { CategoryCreate, CategoryEdit, Categories } from "features/categories";
 import {
