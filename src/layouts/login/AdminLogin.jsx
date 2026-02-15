@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { api } from "api";
 import PageTitle from "components/ui/PageTitle";
 import { LoadingButton } from "components/ui/buttons";
-import AppLogo from "assets/images/app-logo.png";
+import AppLogo from "assets/images/app-logo.avif";
 import BackgroundImage from "assets/images/background-app.webp";
 import "./login.css";
 
@@ -56,7 +56,7 @@ const AdminLogin = () => {
       <div className="bg-wrapper">
         <img
           src={BackgroundImage}
-          alt=""
+          alt="ebsar"
           className="bg-image w-100 h-100 object-fit-cover"
           loading="eager"
           sizes="100vw"
@@ -67,7 +67,14 @@ const AdminLogin = () => {
 
       <div className="form-wrapper rounded-2 text-center position-absolute top-50 start-50 w-100">
         <div className="form-header mb-4">
-          <img src={AppLogo} alt="Logo" className="bg-white rounded-circle object-fit-cover" />
+          <img src={AppLogo} 
+            alt="Logo" 
+            className="bg-white rounded-circle object-fit-cover" 
+            width="80"
+            height="80"
+            decoding="async"
+            fetchpriority="high"
+            />
         </div>
 
         <form onSubmit={handleSubmit} className="d-flex flex-column gap-3">
