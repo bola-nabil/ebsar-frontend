@@ -10,25 +10,39 @@ import useBookLookups from "../hooks/useBookLookups";
 const BookEdit = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+
   const book = useBookForm();
+  const { setForm } = book; // ✅ destructure to avoid full object dependency
+
   const lookups = useBookLookups();
 
   useEffect(() => {
-    api.get(`/books/${id}`).then((res) => {
-      const b = res.data.book;
-      book.setForm({
-        title: b.title,
-        publisher_id: b.publisher_id,
-        image: null,
-        file: null,
-        author_ids: b.authors.map((a) => a.id),
-        category_ids: b.categories.map((c) => c.id),
-      });
-    });
-  }, [id]);
+    const fetchBook = async () => {
+      try {
+        const res = await api.get(`/books/${id}`);
+        const b = res.data.book;
+
+        setForm({
+          title: b.title,
+          publisher_id: b.publisher_id,
+          image: null,
+          file: null,
+          author_ids: b.authors.map((a) => a.id),
+          category_ids: b.categories.map((c) => c.id),
+        });
+      } catch (error) {
+        console.error("Failed to fetch book:", error);
+      }
+    };
+
+    if (id) {
+      fetchBook();
+    }
+  }, [id, setForm]); // ✅ correct dependencies
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const success = await book.submit({
       url: `/books/${id}`,
       method: "PUT",
