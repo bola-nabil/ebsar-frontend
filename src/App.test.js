@@ -1,8 +1,8 @@
-import { render, screen } from "@testing-library/react";
-import App from "./App";
+import { render, screen, } from "@testing-library/react";
+import Dashboard from "pages/dashboard/Dashboard";
 
-test("renders Ebsar text", () => {
-  render(<App />);
-  const linkElement = screen.getByText("ebsar");
+test("renders Dashboard text", () => {
+  render(<Dashboard />);
+  const linkElement = screen.getByText("Dashboard");
   expect(linkElement).toBeInTheDocument();
 });
